@@ -1,0 +1,1111 @@
+{
+	"info": {
+		"_postman_id": "3d59a8bf-17f7-4924-9794-84aea48c8d02",
+		"name": "TrueDialog API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29149524"
+	},
+	"item": [
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Upload an Image",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "media",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/image",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"image"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all images",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/image/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"image",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get image file",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/media/{{imageId}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"media",
+								"{{imageId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete image",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/image/{{imageId}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"image",
+								"{{imageId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Campaign",
+			"item": [
+				{
+					"name": "List all campaigns",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/campaign",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"campaign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all channels",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/channel/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"channel",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new MMS campaign",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Name\": \"Your Campaign Name\",\r\n\"CampaignTypeId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/campaign",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"campaign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a new SMS campaign",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"Name\": \"Sms test\",\r\n\"CampaignTypeId\": 1,\r\n\"Content\":\r\n    {\r\n    \"Name\": \"Test content\",\r\n    \"Templates\":\r\n    [\r\n        {\r\n        \"ChannelTypeId\": \"0\",\r\n        \"LanguageId\": \"0\",\r\n        \"EncodingTypeId\": \"0\",\r\n        \"Template\": \"\"\r\n        }\r\n    ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/campaign",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"campaign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Push an campaign",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"channels\":[\r\n      \"\"\r\n   ],\r\n   \"roundRobinById\":false,\r\n   \"targets\":[\r\n      \"\"\r\n   ],\r\n   \"targetsUrl\":null,\r\n   \"targetsColumn\":null,\r\n   \"contactListIds\":[\r\n      \r\n   ],\r\n   \"excludeListIds\":[\r\n      \r\n   ],\r\n   \"mediaId\":null,\r\n   \"from\":null,\r\n   \"subject\":null,\r\n   \"ignoreSingleUse\":false,\r\n   \"forceOptIn\":false,\r\n   \"status\":\"Active\",\r\n   \"campaignId\":{{campaignId}},\r\n   \"message\":\"\",\r\n   \"execute\":true,\r\n    \"schedules\":[\r\n        {\r\n            \"ScheduleTypeId\":2,\r\n            \"RunAt\":\"\",\r\n            \"StartFrom\": \"2024-01-03T00:00:00\",\r\n            \"EndAfter\":\"\",\r\n            \"WeekDay\":\"\",\r\n            \"MonthDay\":\"\",\r\n            \"TimeZone\":\"UTC\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/action-pushCampaign/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"action-pushCampaign",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ContactList",
+			"item": [
+				{
+					"name": "List all contact lists",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/contactlist",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"contactlist"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Callback",
+			"item": [
+				{
+					"name": "Create callback",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"callbackType\": \"\",\r\n  \"url\": \"\",\r\n  \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/callback",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"callback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Coupon",
+			"item": [
+				{
+					"name": "Create Coupon",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"regularOffer\": \"$10.00\",\r\n    \"newOffer\": \"$0.01\",\r\n    \"imageUrl\": \"\",\r\n    \"termsAndConditions\": \"Test\",\r\n    \"urlBase\": \"http://google.com/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/campaign/{{campaignId}}/couponOffer",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"campaign",
+								"{{campaignId}}",
+								"couponOffer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Coupon",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"regularOffer\": \"$10.00\",\r\n    \"newOffer\": \"$0.01\",\r\n    \"imageUrl\": \"\",\r\n    \"termsAndConditions\": \"Test\",\r\n    \"urlBase\": \"http://google.com/\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/campaign/{{campaignId}}/couponOffer",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"campaign",
+								"{{campaignId}}",
+								"couponOffer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Coupon",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/campaign/{{campaignId}}/couponOffer/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"campaign",
+								"{{campaignId}}",
+								"couponOffer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Coupon",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/campaign/31812/couponOffer/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"campaign",
+								"31812",
+								"couponOffer",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "List all Contacts",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/contact/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"contact",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Contact",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phoneNumber\": \"\",\r\n  \"email\": \"\",\r\n  \"subscriptions\": [\r\n    {\r\n      \"subscriptionId\": 123456,\r\n      \"smsEnabled\": true,\r\n      \"mmsEnabled\": true,\r\n      \"emailEnabled\": false,\r\n      \"voiceEnabled\": false\r\n    }\r\n  ],\r\n  \"attributes\": [\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/contact/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"contact",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "List all Subscriptions",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/subscription",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"subscription"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List all Users",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/user/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"\",\r\n  \"password\": \"\",\r\n  \"passwordConfirmation\": \"\",\r\n  \"email\": \"\",\r\n  \"firstName\": \"\",\r\n  \"lastName\": \"\",\r\n  \"phoneNumber\": \"\",\r\n  \"isChatUser\": false,\r\n  \"comment\": \"\",\r\n  \"isApproved\": false,\r\n  \"isLockedOut\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/user/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Attribute Definition",
+			"item": [
+				{
+					"name": "Create a new account attribute definition",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"categoryId\": 3,\r\n  \"dataType\": 1,\r\n  \"name\": \"Test\",\r\n  \"inheritable\": false,\r\n  \"description\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/attributeDef",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"attributeDef"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "APIKey",
+			"item": [
+				{
+					"name": "Create a new API key",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"label\": \"Test\",\r\n  \"type\": 3,\r\n  \"validTo\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/api-key",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"api-key"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subaccounts",
+			"item": [
+				{
+					"name": "Get the child accounts of a subaccount",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/subaccount",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"subaccount"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "Create an account",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"parentId\": {{parentAcountId}},\r\n  \"name\": \"accountName\",\r\n  \"type\": 0,\r\n  \"channels\": [\r\n    \r\n  ],\r\n  \"attributes\": [\r\n    {\r\n      \"id\": 1520,\r\n      \"name\": \"t70_short_url_base\",\r\n      \"value\": [\r\n        {}\r\n      ]\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Upload File",
+			"item": [
+				{
+					"name": "Upload a File (Multipart)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/storage/multipart",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"storage",
+								"multipart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Action Import Contacts",
+			"item": [
+				{
+					"name": "Create a Action Import Contacts",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{apiSecret}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{apiKey}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"schedules\": [],\r\n  \"execute\": true,\r\n  \"url\": \"\",\r\n  \"subscriptions\": [],\r\n  \"overrideSubscription\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/account/{{accountId}}/action-importContacts",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"account",
+								"{{accountId}}",
+								"action-importContacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
